@@ -15,19 +15,13 @@ def word_counter(filepath):
 
 def char_counter(filepath):
     text = get_book_text(filepath)
-    ltext = text.lower()
-    unique_ch = []
     char_count = {}
 
-    for char in ltext:
-        if char not  in unique_ch:
-            unique_ch.append(char)
-
-    for ch in unique_ch:
-        counter = 0
-        for char in ltext:
-            if ch == char:
-                counter += 1
-                char_count[ch] = counter
+    for char in text:
+        lowered = char.lower()
+        if lowered not in char_count:
+            char_count[lowered] = 1
+        else:
+            char_count[lowered] += 1
 
     return char_count
