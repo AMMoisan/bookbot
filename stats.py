@@ -25,3 +25,6 @@ def char_counter(filepath):
             char_count[lowered] += 1
 
     return char_count
+
+def sort_list(dict):
+    return dict['num']
