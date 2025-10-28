@@ -26,5 +26,14 @@ def char_counter(filepath):
 
     return char_count
 
-def sort_list(dict):
-    return dict['num']
+def itemize_dict(dictio):
+    itemized_dict = []
+    for key in dictio:
+        temp_dict = {}
+        if key.isalpha():
+            temp_dict["char"] = key
+            temp_dict["num"] = dictio[key]
+            itemized_dict.append(temp_dict)
+        else:
+            continue
+    return itemized_dict
